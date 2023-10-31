@@ -23,6 +23,7 @@
   border-radius: 5px;
   height: 1.75rem;
   margin-right: 1rem;
+  padding: 0.25rem 0.5rem;
 }
 .task-input::placeholder {
   font-size: 1rem;
@@ -47,21 +48,43 @@ h3 {
   text-decoration: underline;
   font-weight: bolder;
 }
+
 .task {
+  position: relative;
   margin: 0 1.75rem;
   padding: 0.25rem;
   text-align: start;
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.5px;
+  border: 1px solid black;
+  background-color: green;
 }
 .task:hover .fas {
   visibility: visible;
 }
 .remove {
-  float: right;
+  /* float: right; */
+  position: absolute;
+  right: 0.5rem;
   font-size: 1.25rem;
   visibility: hidden;
+  cursor: pointer;
+}
+.edit {
+  /* float: right; */
+  position: absolute;
+  right: 1.25rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  visibility: hidden;
+  cursor: pointer;
+}
+.fa-check {
+  /* float: right; */
+  position: absolute;
+  right: 0.5rem;
+  font-size: 1.1rem;
   cursor: pointer;
 }
 .header {
