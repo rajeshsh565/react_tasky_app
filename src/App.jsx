@@ -27,6 +27,11 @@ const App = () => {
       parent.style.border = "2px solid black";
       parent.style.borderRadius = "5px";
       parent.setAttribute("contentEditable", "true");
+      parent.addEventListener("keypress", (event)=>{
+        if(event.key === "Enter"){
+          event.preventDefault();
+        }
+      })
     } else {
       sibling.classList.add("fa-xmark");
       current.classList.remove("fa-check");

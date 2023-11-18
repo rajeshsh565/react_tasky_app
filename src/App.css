@@ -50,7 +50,7 @@ h3 {
 }
 
 .task {
-  position: relative;
+  /* position: relative; */
   margin: 0 1.75rem;
   padding: 0.25rem;
   text-align: start;
@@ -62,26 +62,26 @@ h3 {
   visibility: visible;
 }
 .remove {
-  /* float: right; */
-  position: absolute;
-  right: 0.5rem;
+  float: right;
+  /* position: absolute; */
+  /* right: 0.5rem; */
   font-size: 1.25rem;
   visibility: hidden;
   cursor: pointer;
 }
 .edit {
-  /* float: right; */
-  position: absolute;
-  right: 1.25rem;
+  float: right;
+  /* position: absolute; */
+  /* right: 1.25rem; */
   margin: 0 0.5rem;
   font-size: 1rem;
   visibility: hidden;
   cursor: pointer;
 }
 .fa-check {
-  /* float: right; */
-  position: absolute;
-  right: 0.5rem;
+  float: right;
+  /* position: absolute; */
+  /* right: 0.5rem; */
   font-size: 1.1rem;
   cursor: pointer;
 }
