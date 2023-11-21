@@ -11,7 +11,7 @@
 }
 
 .task-banner {
-  height: 60vh;
+  height: 25rem;
   border: 0.5rem solid green;
   background: linear-gradient(to bottom right, #d9dbe0, #96ace1);
   border-radius: 0.5rem;
@@ -70,7 +70,7 @@ h3 {
   /* position: absolute; */
   /* right: 0.5rem; */
   font-size: 1.25rem;
-  visibility: hidden;
+  /* visibility: hidden; */
   cursor: pointer;
 }
 .edit {
@@ -79,7 +79,7 @@ h3 {
   /* right: 1.25rem; */
   margin: 0 0.5rem;
   font-size: 1rem;
-  visibility: hidden;
+  /* visibility: hidden; */
   cursor: pointer;
 }
 .fa-check {

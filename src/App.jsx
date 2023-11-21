@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import "animate.css";
 import FlipMove from "react-flip-move";
 
 const App = () => {
@@ -20,6 +21,14 @@ const App = () => {
     const current = e.currentTarget;
     const sibling = e.currentTarget.previousSibling;
     const parent = e.currentTarget.parentElement;
+    parent.animate([
+      {
+        transform: "Scale(0.9)"
+      },
+      {
+        transform: "Scale(1)"
+      }
+    ],500);
     if (current.classList.contains("fa-pen-to-square")) {
       sibling.classList.remove("fa-xmark");
       current.classList.remove("fa-pen-to-square");
@@ -38,6 +47,14 @@ const App = () => {
       current.classList.add("fa-pen-to-square");
       parent.setAttribute("contentEditable", "false");
       parent.style.border = "none";
+      parent.animate([
+        {
+          transform: "Scale(1.1)"
+        },
+        {
+          transform: "Scale(1)"
+        }
+      ],500);
       const newTasks = [...tasks];
       newTasks[i] = parent.innerText;
       setTask([...newTasks]);
@@ -61,16 +78,31 @@ const App = () => {
             <ul>
               {tasks.map((task, i) => {
                 return (
-                  <li className="task" key={i}>
+                  <li
+                    className={"task  animate__animated animate__slideInDown animate__fast"}
+                    key={i}
+                  >
                     {task}
                     <i
                       className="fas fa-xmark remove"
-                      onClick={() => {
-                        setTask(
-                          tasks.filter((task, index) => {
-                            if (index != i) return task;
-                          })
-                        );
+                      onClick={(event) => {
+                        const element = event.currentTarget.parentElement;
+                        element.animate([
+                          {
+                            transform: "translate3D(0,0,0)"
+                          },
+                          {
+                            visibility: "hidden",
+                            transform: "translate3D(0,-100% , 0)"
+                          }
+                        ],350);
+                        setTimeout(() => {
+                          setTask(
+                            tasks.filter((task, index) => {
+                              if (index != i) return task;
+                            })
+                          );
+                        }, 350);
                       }}
                       contentEditable="false"
                     ></i>
